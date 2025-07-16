@@ -7,9 +7,11 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ServerMessagerPlugin extends JavaPlugin {
+    public static ServerMessager MESSAGER;
+
     @Override
     public void onEnable() {
-        ConsoleCommandSender sender = Bukkit.getConsoleSender();
-        sender.sendMessage("[ServerMessager] Plugin enabled");
+        MESSAGER = new ServerMessager(this);
+        MESSAGER.sendPositiveMessage(Bukkit.getConsoleSender(), "Plugin enabled");
     }
 }
