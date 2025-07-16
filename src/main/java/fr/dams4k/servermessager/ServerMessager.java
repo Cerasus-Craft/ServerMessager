@@ -1,41 +1,33 @@
 package fr.dams4k.servermessager;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class ServerMessager extends JavaPlugin {
-    private static JavaPlugin plugin;
+public class ServerMessager {
+    private final JavaPlugin plugin;
 
-    @Override
-    public void onEnable() {
-        ConsoleCommandSender sender = Bukkit.getConsoleSender();
-        sender.sendMessage("[ServerMessager] Plugin enabled");
+    public ServerMessager(JavaPlugin plugin) {
+        this.plugin = plugin;
     }
 
-    public static void init(JavaPlugin plugin) {
-        ServerMessager.plugin = plugin;
-    }
-
-    public static String formatMessage(ChatColor levelColor, String levelName, String message) {
+    public String formatMessage(ChatColor levelColor, String levelName, String message) {
         return String.format("%s[%s]%s %s", levelColor, levelName, ChatColor.WHITE, message);
     }
 
 
-    public static void sendPositiveMessage(CommandSender sender, String message) {
+    public void sendPositiveMessage(CommandSender sender, String message) {
         sendMessage(sender, ChatColor.GREEN, plugin.getName(), message);
     }
-    public static void sendNegativeMessage(CommandSender sender, String message) {
+    public void sendNegativeMessage(CommandSender sender, String message) {
         sendMessage(sender, ChatColor.RED, plugin.getName(), message);
     }
 
-    public static void sendMessage(CommandSender sender, ChatColor levelColor, String levelName, String message) {
+    public void sendMessage(CommandSender sender, ChatColor levelColor, String levelName, String message) {
         sender.sendMessage(formatMessage(levelColor, levelName, message));
     }
 
-    public static void sendError(CommandSender sender, String message) {
+    public void sendError(CommandSender sender, String message) {
         sendMessage(sender, ChatColor.RED, "ERROR", message);
     }
 }
