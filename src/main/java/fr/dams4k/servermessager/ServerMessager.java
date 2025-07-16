@@ -15,6 +15,14 @@ public class ServerMessager {
         return String.format("%s[%s]%s %s", levelColor, levelName, ChatColor.WHITE, message);
     }
 
+
+    public static void sendPositiveMessage(CommandSender sender, String message) {
+        sendMessage(sender, ChatColor.GREEN, plugin.getName(), message);
+    }
+    public static void sendNegativeMessage(CommandSender sender, String message) {
+        sendMessage(sender, ChatColor.RED, plugin.getName(), message);
+    }
+
     public static void sendMessage(CommandSender sender, ChatColor levelColor, String levelName, String message) {
         sender.sendMessage(formatMessage(levelColor, levelName, message));
     }
