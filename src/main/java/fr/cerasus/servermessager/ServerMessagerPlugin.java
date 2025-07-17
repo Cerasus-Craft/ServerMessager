@@ -4,16 +4,16 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ServerMessagerPlugin extends JavaPlugin {
-    public static ServerMessager MESSAGER;
+    public static ServerMessager MESSENGER;
 
     @Override
     public void onEnable() {
-        MESSAGER = new ServerMessager(this);
-        MESSAGER.sendPositiveMessage(Bukkit.getConsoleSender(), "Plugin enabled");
+        MESSENGER = new ServerMessager(this);
+        MESSENGER.sendPositiveMessage(Bukkit.getConsoleSender(), "Plugin enabled");
     }
 
     @Override
     public void onDisable() {
-        MESSAGER.sendNegativeMessage(Bukkit.getConsoleSender(), "Plugin disabled");
+        MESSENGER.sendNegativeMessage(Bukkit.getConsoleSender(), "Plugin disabled");
     }
 }
