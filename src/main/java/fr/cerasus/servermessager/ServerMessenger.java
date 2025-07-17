@@ -4,10 +4,10 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class ServerMessager {
+public class ServerMessenger {
     private final JavaPlugin plugin;
 
-    public ServerMessager(JavaPlugin plugin) {
+    public ServerMessenger(JavaPlugin plugin) {
         this.plugin = plugin;
     }
 

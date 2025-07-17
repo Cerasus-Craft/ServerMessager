@@ -3,12 +3,12 @@ package fr.cerasus.servermessager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class ServerMessagerPlugin extends JavaPlugin {
-    public static ServerMessager MESSENGER;
+public class ServerMessengerPlugin extends JavaPlugin {
+    public static ServerMessenger MESSENGER;
 
     @Override
     public void onEnable() {
-        MESSENGER = new ServerMessager(this);
+        MESSENGER = new ServerMessenger(this);
         MESSENGER.sendPositiveMessage(Bukkit.getConsoleSender(), "Plugin enabled");
     }
 
