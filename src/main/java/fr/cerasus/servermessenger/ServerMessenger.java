@@ -1,4 +1,4 @@
-package fr.cerasus.servermessager;
+package fr.cerasus.servermessenger;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;

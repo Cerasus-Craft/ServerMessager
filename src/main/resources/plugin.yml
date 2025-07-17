@@ -1,4 +1,4 @@
-name: ServerMessager
-main: fr.cerasus.servermessager.ServerMessengerPlugin
+name: ServerMessenger
+main: fr.cerasus.servermessenger.ServerMessengerPlugin
 author: Dams4K
 version: 1.0.0
