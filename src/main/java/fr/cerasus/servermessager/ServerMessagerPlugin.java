@@ -11,4 +11,9 @@ public class ServerMessagerPlugin extends JavaPlugin {
         MESSAGER = new ServerMessager(this);
         MESSAGER.sendPositiveMessage(Bukkit.getConsoleSender(), "Plugin enabled");
     }
+
+    @Override
+    public void onDisable() {
+        MESSAGER.sendNegativeMessage(Bukkit.getConsoleSender(), "Plugin disabled");
+    }
 }
