@@ -1,4 +1,4 @@
-package fr.dams4k.servermessager;
+package fr.cerasus.servermessager;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
