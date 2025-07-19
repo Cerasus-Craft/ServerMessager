@@ -23,6 +23,10 @@ public class ServerMessenger {
         sendMessage(sender, ChatColor.RED, plugin.getName(), message);
     }
 
+    public void sendNeutralMessage(CommandSender sender, String message) {
+        sendMessage(sender, ChatColor.BLUE, plugin.getName(), message);
+    }
+
     public void sendWarningMessage(CommandSender sender, String message) {
         sendMessage(sender, ChatColor.GOLD, plugin.getName(), message);
     }
